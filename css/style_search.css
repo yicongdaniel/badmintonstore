@@ -1,0 +1,180 @@
+/* @School: Algonquin College
+@Course: CST 8285
+@Professor: Hassan Mohammad
+@auther: Yicong Zhang
+@student number:40991538 */
+
+body{
+    /* background-color:rgb(35, 35, 95); */
+    background:url('../img/bg2.jpg')  -30px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Cormorant Garamond', serif;
+    color:white
+}
+
+p,a,input,label,textarea,span, ul,li{
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* nav's color and size */
+.nav-link{
+    color:white;
+    font-size: 20px;
+}
+
+.btn{
+    background: rgb(35, 35, 95);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 3px;
+}
+
+#cs{
+    margin-left: 150px;
+    border-radius: 3px;
+    border-radius: 3px;
+}
+
+header li{
+    color:white;
+    margin: 0 10px;
+}
+
+/* header end */
+
+.checked {
+    color: orange;
+  }
+
+
+#second{
+    
+    padding-top: 10px;
+}
+
+#second p{
+    color: white
+}
+
+#second .rating{
+    text-decoration: none;
+}
+
+.sort_button {
+    background-color: white;
+    border: none;
+    color: black;
+    
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -5px 6px;
+    /* margin-bottom: 5px; */
+    cursor: pointer;
+  }
+
+#second .container{
+
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.btn-group{
+
+    justify-content: space-evenly;
+}
+
+#second button{
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+#second .btn-group1{
+    /* margin-right: 100px; */
+    /* padding-left: 100px; */
+
+}
+
+#second .btn-group2{
+    margin-left: 20px;
+
+}
+
+#second .btn-group3{
+    margin-left: 680px;
+
+}
+
+
+#products   {
+    padding: 50px 0px;
+    margin-bottom: 50px;
+}
+
+#products h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+#products .row{
+    margin-bottom: 50px;
+}
+
+#products .upper{
+    position: relative;
+}
+
+#products .medium h4{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#products .medium p{
+    text-align: center;
+}
+
+#products img{
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+#products a{
+    color: white;
+    text-decoration: none;
+}
+
+#products .addtocart{
+    border-radius: 3px
+  }
+
+#products .lower{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+table{
+    width:100%;
+    color:white;
+    
+    /* border: 3px solid white; */
+    
+}
+
+#all-products{
+    color: white;
+
+}
+
+/* for mobile only */
+@media only screen and (max-width: 480px) {
+    .container{
+        flex-direction: column;
+        text-align: left;
+     }
+}
+
+/* style_search.css end */

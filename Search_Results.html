@@ -1,0 +1,157 @@
+<!-- @School: Algonquin College
+@Course: CST 8285
+@Professor: Hassan Mohammad
+@auther: Yicong Zhang
+@student number:40991538 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/style_search.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/2de98ff439.js" crossorigin="anonymous"></script>
+        <script src="./js/Search_Results.js"></script>
+        <script src="./js/Data.js"></script>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Search | YC Badminton</title>
+        
+    </head>
+
+    <body>
+        <header>
+            <div class = "container">
+                <nav class="navbar navbar-expand-lg navbar-black ">
+                    <h1><img src='img/logo.jpg' width="120px">
+                    </h1>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                    <a class="nav-link" href="C:\Users\danie\OneDrive\Desktop\Project\Landing.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="C:/Users/danie/OneDrive/Desktop/Project/Search_Results.html?text=racket">Rackets</a>
+                                    <a class="dropdown-item" href="C:/Users/danie/OneDrive/Desktop/Project/Search_Results.html?text=shoe">Shoes</a>
+                                </div>
+                             </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                            </li>
+
+                        </ul>
+
+                    <!-- Search bar -->
+                    <form class="form-inline my-2 my-lg-0" action="Search_Results.html" method="GET">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search_box" name = "text">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                    <!-- Cart and Sign in -->
+                    <div id = cs>                    
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cart<i style='font-size:20px' class='fas'>&#xf07a;</i></button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button></div>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+        <!-- Header end --> 
+        <hr>
+
+        <section id = "first" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Filter and Sorting</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="second">
+            <div class="container">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                  <!-- Filter part -->
+                    <div class="btn-group1" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Rating Filter 
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <input class="dropdown-item" type="number" id="lowRating" min="0" max="1000" placeholder="Enter min *">
+                        <input class="dropdown-item" type="number" id="highRating" min="0" max="1000" placeholder="Enter max *"> 
+                        <button class="dropdown-item" onclick="filter('rating')">Search</button>
+
+                        </div>
+                    </div>
+
+                    <div class="btn-group2" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Price Filter 
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <input class="dropdown-item" type="number" id="lowPrice" min="0" max="1000" placeholder="Enter min$">
+                        <input class="dropdown-item" type="number" id="highPrice" min="0" max="1000" placeholder="Enter max$"> 
+                        <button class="dropdown-item" onclick="filter('price')">Search</button>
+
+                        </div>
+                    </div>
+
+                    <!-- Sorting part -->
+                    <div class="btn-group3" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Sort by:
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <button class="dropdown-item" onclick="sort('price', 'lowTohigh')"> Pirce: Low to High</button>
+                            <button class="dropdown-item" onclick="sort('price', 'highTolow')">Pirce: High to Low</button>
+                            <button class="dropdown-item" onclick="sort('rating', 'lowTohigh')"> Rating: Low to High</button>
+                            <button class="dropdown-item" onclick="sort('rating', 'highTolow')">Rating: High to Low</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- second part(sortting area) end -->
+
+        <section id="products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Results</h3>
+                    </div>
+                </div>
+
+                <!-- All prodect goes here -->
+                <div class="row" id="all-products">
+                </div>
+            </div>
+        </section>
+
+    </body>
+ 
+</html>
+
+
+            
+
+        

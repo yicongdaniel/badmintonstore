@@ -1,0 +1,107 @@
+/* @School: Algonquin College
+@Course: CST 8285
+@Professor: Hassan Mohammad
+@auther: Yicong Zhang
+@student number:40991538 */
+
+body{
+    background:url('../img/bg2.jpg')-30px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Cormorant Garamond', serif;
+    color:white
+}
+
+p,a,input,label,textarea,span, ul,li{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Setting nav's color and size */
+.nav-link{
+    color:white;
+    font-size: 20px;
+}
+
+/* Button characteritic */
+.btn{
+    background: rgb(35, 35, 95);
+    color: white;
+    padding: 9px 20px; /*Top and bottom only*/
+    border-radius: 3px;
+}
+
+#cs{
+    margin-left: 150px;
+}
+
+header li{
+    color:white;
+    margin: 0 10px;
+}
+
+/* Header CSS end */
+
+
+
+#second{
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+
+#second h1{
+    margin-top:100px;
+    font-size: 50px;
+    margin-bottom: 10px;;
+    
+}
+
+#second p{
+    font-size:20px; 
+}
+
+
+
+
+#third{
+    padding: 50px 0px;
+    margin-top: 30px; 
+}
+
+#third h3{
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40PX;
+}
+
+#third h4{
+    text-align: center;
+}
+
+#third img{
+    max-width: 100%;
+    width:800px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+#footer{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    padding-bottom: 20px;
+    font-weight: bold; 
+}
+
+/* for mobile only */
+@media only screen and (max-width: 480px) {
+    .container{
+        flex-direction: column;
+        text-align: left;
+     }
+}
+
+/* end of style_home.css */

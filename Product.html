@@ -1,0 +1,186 @@
+<!-- @School: Algonquin College
+@Course: CST 8285
+@Professor: Hassan Mohammad
+@auther: Yicong Zhang
+@student number:40991538 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style_products.css">
+
+        <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/2de98ff439.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./js/Product.js"></script>
+        <script src="./js/Data.js"></script>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Product</title>
+        
+    </head>
+
+    <body>
+        <header>
+            <div class = "container">
+                <nav class="navbar navbar-expand-lg navbar-black ">
+                    <h1><img src='img/logo.jpg' width="120px">
+                    </h1>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                    <a class="nav-link" href="C:\Users\danie\OneDrive\Desktop\Project\Landing.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="C:/Users/danie/OneDrive/Desktop/Project/Search_Results.html?text=racket">Rackets</a>
+                                    <a class="dropdown-item" href="C:/Users/danie/OneDrive/Desktop/Project/Search_Results.html?text=shoe">Shoes</a>
+                                </div>
+                             </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0" action="Search_Results.html" method="GET">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search_box" name = "text">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
+                    <div id = cs>                    
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cart<i style='font-size:20px' class='fas'>&#xf07a;</i></button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button></div>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+        <!-- Header end --> 
+
+
+
+        <section id="second">
+            <div class="container">
+
+                <div class="row">
+                    <!-- Image part -->
+                    <div class="col-md-6">
+                        <div class="img-magnifier-container">
+                            <img id="image" width="500" height="400">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        
+                            <div class="medium">
+                                <h3 id="title"></h3>
+                                <div>
+                                    <h4> Rating: <span id="rating"></span>/5</h4>
+                                </div>
+
+                                <h4>DESCROPTION</h4>
+                                <div id="des" style="font-family: 'Josefin Sans', sans-serif"></div>
+
+                                <span class="lower"> 
+                                    <!-- Quantity Selector part -->
+                                    <form id ="Selector"method="post" action="/" class="product-item" >
+
+                                        <h5> Unit Price (CAD$):</h5>
+                                        <div class="product1-Item-price">
+                                            <p id="price"></p>
+                                        </div>
+
+                                        <h5> Total Price(CAD$):</h5>
+                                        <!-- Showing & update total price -->
+                                        <div class="product1-total-price" >
+                                        </div>
+                                        <select id="product1" onchange="calculteTotal(event)" name="quantity" class="product-select" tabindex="1">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <button class="addtocart" type="submit"><i style='font-size:20px' class='fas'>&#xf07a;</i></button> 
+                                      </form>
+
+                                </span>
+                            </div>
+                        
+                        </div>
+
+
+                </div>
+
+                <br>
+                <br>
+
+            </div>
+        </section>
+
+        <section id="third">
+            <div class = "container">
+                <div class="row">
+                    <div class='col-md-8 offset-md-2 text-center'>
+                        <h3>Join YC! Better performance in your games</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="img/victor.png" >
+                                <h5>Player Victor</h5>
+                            </div>
+                            <div class="col-md-8 text-left">
+                                <p class="lead">User experience</p>
+                                <p>Remarkable racquet. Really amazing balance of power, spin, control, stability, and maneuverability
+                                    YC is continuing to prove why over 40% of top 200 on both tours use their rackets!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- third end -->
+
+        <section class="footer"> 
+            <div>
+                Contact us:<br/>
+                Phone: 613-913-2693<br/>
+                Email: <a href="mailto:info@dcbadminton.com">info@dcbadminton.com</a>
+            </div>
+    
+            <div><br/><br/>YC Badminton Copyright©2020
+            </div>
+    
+            <div>Locations:<br/>
+            120 abc Ave, Ottawa, ON, K1N 5L7<br/>
+            225 cdf Ave, Toronto, ON, O1G 6L5
+            </div>
+        </section>
+
+        <!-- footer end -->
+
+    </body>
+
+</html>
+
