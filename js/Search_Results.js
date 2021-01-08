@@ -22,7 +22,7 @@ function productListing(productArray){
         `<div class="col-md-4">
                 <div class="outer">
                         <div class="upper">
-                            <a href = "product.html?id=<ID>"> <img src="IMAGE" alt="rajkumar" class="imgh"></img> </a> 
+                            <a href = "Product.html?id=<ID>"> <img src="IMAGE" alt="rajkumar" class="imgh"></img> </a> 
                             </div>
 
                             <div class="medium">
@@ -117,36 +117,3 @@ function sort(field, order){
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
